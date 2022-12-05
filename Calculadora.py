@@ -1,15 +1,8 @@
-"""
-código que cria uma calculadora com as principais operações matemáticas
-a calculadora possui as 4 operações aritméticas: Adição(+), Subtração(-), Multiplicação(x) e Divisão(/)
-além disso, ela possui outras 3 operações: Fatorial(!), Raiz Quadrada(√) e Exponenciação(^)
-o código verifica, em cada campo de entrada de dados, se o usuário digitou o tipo correto de dado no campo
-o código também mostra uma mensagem de abertura, que deixa o programa mais amigável para o usuário
-por fim, a calculadora pergunta se o usuário quer fazer mais operações matemáticas. Caso a resposta seja sim, a calculadora reinicia seu estado
-permitindo que novas operações sejam realizadas"""
 import math
 import sys
 import os
 from time import sleep
+
 os.system("cls")
 def mensagem_abertura(msg):
     tam = len(msg)
