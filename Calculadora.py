@@ -4,123 +4,123 @@ import os
 from time import sleep
 
 os.system("cls")
-def mensagem_abertura(msg):
-    tam = len(msg)
-    print("-="*tam)
+def opening_message(msg):
+    lenght = len(msg)
+    print("-="*lenght)
     print(msg.center(50))
-    print("-=" * tam)
+    print("-=" * lenght)
     print("\n")
-    print("[1]Calculos Aritméticos", " [2]Fatorial", " [3]Raiz Quadrada", " [4]Exponenciação")
-def aritmeticos(escolha):
-    print("[1]Adição", "[2]Subtração", "[3]Multiplicação", "[4]Divisão")
+    print("[1]Arithmetical Calculations", " [2]Factorial", " [3]Square Root", " [4]Exponentiation")
+def arithmetical(choice):
+    print("[1]Addition", "[2]Subtraction", "[3]Multiplication", "[4]Division")
     while True:
         try:
-            escolha = int(input("-> "))
+            choice = int(input("-> "))
             break
         except ValueError:
-            print("\nOops! Não é uma opção válida.  Tente novamente")
-            aritmeticos(escolha)
-    match escolha:
-        case 1:                                         #Adição
-            adiciona1 = input("Digite um número: ")
-            adiciona2 = input("Digite outro número: ")
-            if adiciona1.isnumeric() and adiciona2.isnumeric():
-                adiciona1, adiciona2 = float(adiciona1), float(adiciona2)
-                resultado(adiciona1 + adiciona2)
+            print("\nOops! Not a valid option. Try again")
+            arithmetical(choice)
+    match choice:
+        case 1:                                         #Addiction
+            add1 = input("Type a number: ")
+            add2 = input("Type another number: ")
+            if add1.isnumeric() and add2.isnumeric():
+                add1, add2 = float(add1), float(add2)
+                math_result(add1 + add2)
             else:
-                print("Você precisa digitar um número nas duas parcelas")
-                executa_outra()
-        case 2:                                         #Subtração
-            minuendo = input("Digite o minuendo: ")
-            subtraendo = input("Digite o subtraendo: ")
-            if minuendo.isnumeric() and subtraendo.isnumeric():
-                minuendo, subtraendo = float(minuendo), float(subtraendo)
-                resultado(minuendo - subtraendo)
+                print("You need to type two numbers")
+                exec_again()
+        case 2:                                         #Subtraction
+            minus1 = input("Type a number: ")
+            minus2 = input("Typer another number: ")
+            if minus1.isnumeric() and minus2.isnumeric():
+                minus1, minus2 = float(minus1), float(minus2)
+                math_result(minus1 - minus2)
             else:
-                print("Você precisa digitar um número tanto no minuendo, quanto no subtraendo")
-                executa_outra()
-        case 3:                                         #Multiplicação
-            multiplicando = input("Digite o multiplicando: ")
-            multiplicador = input("Digite o multiplicador: ")
-            if multiplicando.isnumeric() and multiplicador.isnumeric():
-                multiplicando, multiplicador = float(multiplicando), float(multiplicador)
-                resultado(multiplicando * multiplicador)
+                print("You need to type two numbers")
+                exec_again()
+        case 3:                                         #Multiplication
+            multiply1 = input("Type a number: ")
+            multiply2 = input("Type another number: ")
+            if multiply1.isnumeric() and multiply2.isnumeric():
+                multiply1, multiply2 = float(multiply1), float(multiply2)
+                math_result(multiply1 * multiply2)
             else:
-                print("Você precisa digitar um número tanto no multiplicando, quanto no multiplicador")
-                executa_outra()
-        case 4:                                         #Divisão
-            dividendo = input("Digite o dividendo: ")
-            divisor = input("Digite o divisor: ")
+                print("You need to type two numbers")
+                exec_again()
+        case 4:                                         #Division
+            divide1 = input("Type a number: ")
+            divide2 = input("Type another number: ")
             try:
-                if dividendo.isnumeric() and divisor.isnumeric():
-                    dividendo, divisor = float(dividendo), float(divisor)
-                    resultado(dividendo / divisor)
+                if divide1.isnumeric() and divide2.isnumeric():
+                    divide1, divide2 = float(divide1), float(divide2)
+                    math_result(divide1 / divide2)
                 else:
-                    print("Você precisa digitar um número tanto no multiplicando, quanto no multiplicador")
-                    executa_outra()
+                    print("You need to type two numbers")
+                    exec_again()
             except ZeroDivisionError:
-                print("Divisão por 0 não está definida")
-                pergunta_outra()
+                print("Division for 0 is not defined")
+                ask_again()
         case _:
-            print("\nOops! Não é uma opção válida.  Tente novamente")
-            aritmeticos(escolha)
-def pergunta_outra():
-    print("Que fazer outra operação? [s]sim, [n]não")
-    teste = input("->")
-    if teste == "s":
-        executa_outra()
-    elif teste == "n":
+            print("\nOops! Not a valid option. Try again")
+            arithmetical(choice)
+def ask_again():
+    print("Another Operation? [y]yes, [n]no")
+    test = input("->")
+    if test == "y":
+        exec_again()
+    elif test == "n":
         sys.exit()
     else:
-        print("Opção inválida, digite [s]para sim e [n]para não\n")
+        print("Invalid Option, digit [y]for yes or [n]for no\n")
         sleep(2)
         os.system("cls")
-        pergunta_outra()
-def executa_outra():    #Reinicia a calculadora
+        ask_again()
+def exec_again():    #Reinicia a calculadora
     sleep(2)
     os.system("cls")
-    calculadora()
-def resultado(result):
-    print("O Resultado é: ", result)
-    pergunta_outra()
-def calculadora():
-    mensagem_abertura("Qual cálculo deseja fazer?")
-    while True:  #Este loop força o usuário a digitar um número
+    calculator()
+def math_result(result):
+    print("The result is: ", result)
+    ask_again()
+def calculator():
+    opening_message("Which Operation Do You Want?")
+    while True:  #This loop forces the user to enter a number
         while True:
             try:
-                escolha = int(input("-> "))
+                choice = int(input("-> "))
                 break
             except ValueError:
-                print("\nOops! Não é uma opção válida.  Tente novamente")
-                executa_outra()
-        if escolha == 1:                                #Operações Aritméticas
-            aritmeticos(escolha)
-        elif escolha == 2:                              #Fatorial de um Número
-            fatorial = input("Digite o número: ")
-            if fatorial.isnumeric():
-                fatorial = int(fatorial)
-                resultado(math.factorial(fatorial))
+                print("\nOops! Not a valid option. Try again")
+                exec_again()
+        if choice == 1:                                #Arithmetical Operations
+            arithmetical(choice)
+        elif choice == 2:                              #Factorial of a Number
+            factorial = input("Type a number: ")
+            if factorial.isnumeric():
+                factorial = int(factorial)
+                math_result(math.factorial(factorial))
             else:
-                print("Você precisa digitar um número")
-                executa_outra()
-        elif escolha == 3:                              #Raiz Quadrada
-            raiz = input("Digite um número: ")
-            if raiz.isnumeric():
-                raiz = float(raiz)
-                resultado(math.sqrt(raiz))
+                print("You need to type a number")
+                exec_again()
+        elif choice == 3:                              #Square Root
+            root = input("Type a number: ")
+            if root.isnumeric():
+                root = float(root)
+                math_result(math.sqrt(root))
             else:
-                print("Você precisa digitar um número")
-                executa_outra()
-        elif escolha == 4:                              #Exponenciação
-            base = input("Digite a base: ")
-            expoente = input("Digite o expoente: ")
-            if base.isnumeric() and expoente.isnumeric():
-                base, expoente = int(base), int(expoente)
-                resultado(math.pow(base, expoente))
+                print("You need to type a number")
+                exec_again()
+        elif choice == 4:                              #Exponentiation
+            base = input("Digit the base: ")
+            exponent = input("Digit the exponent: ")
+            if base.isnumeric() and exponent.isnumeric():
+                base, exponent = int(base), int(exponent)
+                math_result(math.pow(base, exponent))
             else:
-                print("Você precisa digitar um número tanto na base, quanto no expoente")
-                executa_outra()
+                print("You need to enter a number in both the base and exponent")
+                exec_again()
         else:
-            print("\nOops! Não é uma opção válida.  Tente novamente")
-            executa_outra()
-calculadora()
+            print("\nOops! Not a valid option. Try again")
+            exec_again()
+calculator()
