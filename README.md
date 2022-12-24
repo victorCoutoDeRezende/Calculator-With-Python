@@ -1,5 +1,5 @@
-# Calculator-In-Python
-Calculator in Python without using object oriented programming ou graphic interfaces.
+# Calculator-With-Python
+Calculator with Python without using object oriented programming ou graphic interfaces.
 
 ->A code that creates a calculator with the principal math operations.
 
