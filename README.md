@@ -1,16 +1,15 @@
-# Calculadora-em-Python
-Calculadora em Python sem usar orientação a objetos ou interfaces gráficas
+# Calculator-In-Python
+Calculator in Python without using object oriented programming ou graphic interfaces.
 
-->Código que cria uma calculadora com as principais operações matemáticas
+->A code that creates a calculator with the principal math operations.
 
-•A calculadora possui as 4 operações aritméticas: Adição(+), Subtração(-), Multiplicação(x) e Divisão(/);
+•The calculator has 4 arithmetic operations: Addiction(+),  Subtraction(-), Subtração(-), Multiplication(*) and Division(/);
 
-•Além disso, ela possui outras 3 operações: Fatorial(!), Raiz Quadrada(√) e Exponenciação(^);
+•Moreover, it has 3 other operations: Factorial(!), Square Root(√) and Exponentiation(^);
 
-•O código verifica, em cada campo de entrada de dados, se o usuário digitou o tipo correto de dado no campo;
+•The code checks, in each data entry field, if the user has entered the correct type of data in the field.;
 
-•O código também mostra uma mensagem de abertura, que deixa o programa mais amigável para o usuário;
+•The code also displays an opening message, which makes the program more user-friendly.;
 
-•Por fim, a calculadora pergunta se o usuário quer fazer mais operações matemáticas. Caso a resposta seja sim, a calculadora reinicia seu estado
-permitindo que novas operações sejam realizadas;
-![Captura de Tela (64)](https://user-images.githubusercontent.com/101605675/205706689-d1c3f3e9-db30-4630-b3ba-4047f644be43.png)
+•Lastly, the calculator asks if the user wants to do more math operations. If the answer is yes, the calculator reset its state allowing
+new operations to be realized;
